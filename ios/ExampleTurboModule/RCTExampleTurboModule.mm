@@ -1,21 +1,21 @@
 //
-//  RCTNativeModuleExample.m
+//  RCTExampleTurboModule.m
 //  ReactNativeModules
 //
 //  Created by MDJ on 25/11/2025.
 //
 
-#import "RCTNativeModuleExample.h"
+#import "RCTExampleTurboModule.h"
 
-@implementation RCTNativeModuleExample
+@implementation RCTExampleTurboModule
 
 + (NSString *)moduleName
 {
-  return @"NativeModuleExample";
+  return @"ExampleTurboModule";
 }
 
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:(const facebook::react::ObjCTurboModule::InitParams &)params {
-  return std::make_shared<facebook::react::NativeModuleExampleSpecJSI>(params);
+  return std::make_shared<facebook::react::NativeExampleTurboModuleSpecJSI>(params);
 }
 
 - (NSString *)numberToString:(double)value {

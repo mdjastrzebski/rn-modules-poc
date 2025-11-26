@@ -8,7 +8,7 @@
 import { StatusBar, StyleSheet, Text, useColorScheme } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
-import NativeModuleExample from './specs/NativeModuleExample';
+import ExampleTurboModule from './specs/NativeExampleTurboModule';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -24,7 +24,7 @@ function App() {
 function AppContent() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Native Module Test: {NativeModuleExample.numberToString(123)}</Text>
+      <Text>Native Module Test: {ExampleTurboModule.numberToString(123)}</Text>
     </SafeAreaView>
   );
 }

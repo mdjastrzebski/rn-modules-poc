@@ -10,11 +10,11 @@
     "test": "jest"
   },
   "codegenConfig": {
-    "name": "NativeModuleExample",
+    "name": "ExampleTurboModule",
     "type": "modules",
     "jsSrcsDir": "specs",
     "android": {
-      "package": "com.example.NativeModuleExample"
+      "package": "com.example.ExampleTurboModule"
     }
   },
   "dependencies": {

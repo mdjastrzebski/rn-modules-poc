@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-ReactNativeModules.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-ReactNativeModules.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		4885580B2ED65E7B00DE5CE5 /* RCTNativeModuleExample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4885580A2ED65E7B00DE5CE5 /* RCTNativeModuleExample.mm */; };
+		4885580B2ED65E7B00DE5CE5 /* RCTExampleTurboModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4885580A2ED65E7B00DE5CE5 /* RCTExampleTurboModule.mm */; };
 		68C8F262B5E168C568085D96 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -22,8 +22,8 @@
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = ReactNativeModules/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-ReactNativeModules.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeModules.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeModules/Pods-ReactNativeModules.debug.xcconfig"; sourceTree = "<group>"; };
 		488558082ED65E7900DE5CE5 /* ReactNativeModules-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeModules-Bridging-Header.h"; sourceTree = "<group>"; };
-		488558092ED65E7B00DE5CE5 /* RCTNativeModuleExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTNativeModuleExample.h; sourceTree = "<group>"; };
-		4885580A2ED65E7B00DE5CE5 /* RCTNativeModuleExample.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RCTNativeModuleExample.mm; sourceTree = "<group>"; };
+		488558092ED65E7B00DE5CE5 /* RCTExampleTurboModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTExampleTurboModule.h; sourceTree = "<group>"; };
+		4885580A2ED65E7B00DE5CE5 /* RCTExampleTurboModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RCTExampleTurboModule.mm; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-ReactNativeModules.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeModules.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeModules/Pods-ReactNativeModules.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-ReactNativeModules.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeModules.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ReactNativeModules/AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,14 +64,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		488558072ED65E2C00DE5CE5 /* NativeModuleExample */ = {
+		488558072ED65E2C00DE5CE5 /* ExampleTurboModule */ = {
 			isa = PBXGroup;
 			children = (
-				488558092ED65E7B00DE5CE5 /* RCTNativeModuleExample.h */,
-				4885580A2ED65E7B00DE5CE5 /* RCTNativeModuleExample.mm */,
+				488558092ED65E7B00DE5CE5 /* RCTExampleTurboModule.h */,
+				4885580A2ED65E7B00DE5CE5 /* RCTExampleTurboModule.mm */,
 				488558082ED65E7900DE5CE5 /* ReactNativeModules-Bridging-Header.h */,
 			);
-			path = NativeModuleExample;
+			path = ExampleTurboModule;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -84,7 +84,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				488558072ED65E2C00DE5CE5 /* NativeModuleExample */,
+				488558072ED65E2C00DE5CE5 /* ExampleTurboModule */,
 				13B07FAE1A68108700A75B9A /* ReactNativeModules */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -206,13 +206,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeModules/Pods-ReactNativeModules-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeModules/Pods-ReactNativeModules-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -249,13 +245,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeModules/Pods-ReactNativeModules-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeModules/Pods-ReactNativeModules-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -270,7 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
-				4885580B2ED65E7B00DE5CE5 /* RCTNativeModuleExample.mm in Sources */,
+				4885580B2ED65E7B00DE5CE5 /* RCTExampleTurboModule.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +292,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.mdj.--PRODUCT-NAME-rfc1034identifier-";
 				PRODUCT_NAME = ReactNativeModules;
-				SWIFT_OBJC_BRIDGING_HEADER = "NativeModuleExample/ReactNativeModules-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExampleTurboModule/ReactNativeModules-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -329,7 +321,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.mdj.--PRODUCT-NAME-rfc1034identifier-";
 				PRODUCT_NAME = ReactNativeModules;
-				SWIFT_OBJC_BRIDGING_HEADER = "NativeModuleExample/ReactNativeModules-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExampleTurboModule/ReactNativeModules-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

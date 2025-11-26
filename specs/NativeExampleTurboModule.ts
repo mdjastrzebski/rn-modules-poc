@@ -5,4 +5,4 @@ export interface Spec extends TurboModule {
   numberToString(value: number): string;
 }
 
-export default TurboModuleRegistry.getEnforcing<Spec>('NativeModuleExample');
+export default TurboModuleRegistry.getEnforcing<Spec>('ExampleTurboModule');
