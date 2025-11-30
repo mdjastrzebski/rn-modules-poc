@@ -15,6 +15,11 @@
     "jsSrcsDir": "specs",
     "android": {
       "package": "com.example.ExampleTurboModule"
+    },
+    "ios": {
+      "componentProvider": {
+        "SimpleText": "RCTSimpleText"
+      }
     }
   },
   "dependencies": {
