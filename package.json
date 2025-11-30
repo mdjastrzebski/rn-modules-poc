@@ -10,8 +10,8 @@
     "test": "jest"
   },
   "codegenConfig": {
-    "name": "ExampleTurboModule",
-    "type": "modules",
+    "name": "AppSpec",
+    "type": "all",
     "jsSrcsDir": "specs",
     "android": {
       "package": "com.example.ExampleTurboModule"

@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ExampleTurboModule/ExampleTurboModule.h>
+#import <AppSpec/AppSpec.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
