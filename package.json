@@ -9,6 +9,14 @@
     "start": "react-native start",
     "test": "jest"
   },
+  "codegenConfig": {
+    "name": "ExampleTurboModule",
+    "type": "modules",
+    "jsSrcsDir": "specs",
+    "android": {
+      "package": "com.example.ExampleTurboModule"
+    }
+  },
   "dependencies": {
     "react": "19.1.1",
     "react-native": "0.82.1",
