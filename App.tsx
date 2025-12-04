@@ -35,7 +35,7 @@ function AppContent() {
   return (
     <SafeAreaView style={styles.container}>
       <Text>Native Module Test: {ExampleTurboModule.numberToString(123)}</Text>
-      <SimpleText style={styles.simpleText} text={text} />
+      <SimpleText style={styles.simpleText} text={text} fontSize={24} />
       <Text>End</Text>
 
       <Pressable

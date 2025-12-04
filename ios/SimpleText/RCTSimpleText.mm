@@ -51,9 +51,10 @@ using namespace facebook::react;
     needsUpdateState = true;
   }
   
-//  if (oldViewProps.fontSize != newViewProps.fontSize) {
-//    _label.font = [UIFont systemFontOfSize:newViewProps.fontSize];
-//  }
+  if (oldViewProps.fontSize != newViewProps.fontSize) {
+    _label.font = [UIFont systemFontOfSize:newViewProps.fontSize];
+    needsUpdateState = true;
+  }
   
   if (needsUpdateState && _state != nullptr) {
     auto size = _label.intrinsicContentSize;

@@ -13,12 +13,5 @@ extern const char SimpleTextComponentName[] = "SimpleText";
 
 #pragma mark - LayoutableShadowNode
 
-Size SimpleTextShadowNode::measureContent(
-    const LayoutContext & /*layoutContext*/,
-    const LayoutConstraints & /*layoutConstraints*/) const
-{
-  return {.width = 80, .height = 20};
-}
-
 } // namespace facebook::react
 

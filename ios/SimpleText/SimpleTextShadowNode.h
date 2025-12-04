@@ -19,10 +19,10 @@ namespace facebook::react {
 JSI_EXPORT extern const char SimpleTextComponentName[];
 
 class SimpleTextShadowNode final
-    : public ConcreteViewShadowNode<SimpleTextComponentName, SimpleTextProps, SimpleTextEventEmitter, SimpleTextState> {
- public:
+: public ConcreteViewShadowNode<SimpleTextComponentName, SimpleTextProps, SimpleTextEventEmitter, SimpleTextState> {
+public:
   using ConcreteViewShadowNode::ConcreteViewShadowNode;
-
+  
   static ShadowNodeTraits BaseTraits()
   {
     auto traits = ConcreteViewShadowNode::BaseTraits();
@@ -30,10 +30,7 @@ class SimpleTextShadowNode final
     traits.set(ShadowNodeTraits::Trait::MeasurableYogaNode);
     return traits;
   }
-      
-#pragma mark - LayoutableShadowNode
-
-  Size measureContent(const LayoutContext &layoutContext, const LayoutConstraints &layoutConstraints) const override;
+  
 };
 
 } // namespace facebook::react
