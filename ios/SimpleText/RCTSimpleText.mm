@@ -11,6 +11,8 @@
 #import <react/renderer/components/AppSpec/Props.h>
 #import <react/renderer/components/AppSpec/RCTComponentViewHelpers.h>
 
+#import "SimpleTextComponentDescriptor.h"
+
 using namespace facebook::react;
 
 @interface RCTSimpleText () <RCTSimpleTextViewProtocol>
@@ -18,6 +20,7 @@ using namespace facebook::react;
 
 
 @implementation RCTSimpleText {
+  SimpleTextShadowNode::ConcreteState::Shared _state;
   UILabel *_label;
 }
 
@@ -63,21 +66,44 @@ using namespace facebook::react;
   const auto &oldViewProps = *std::static_pointer_cast<SimpleTextProps const>(_props);
   const auto &newViewProps = *std::static_pointer_cast<SimpleTextProps const>(props);
 
+  bool needsUpdateState = false;
+  
   if (oldViewProps.text != newViewProps.text) {
     _label.text = [NSString stringWithUTF8String:newViewProps.text.c_str()];
+    needsUpdateState = true;
   }
   
 //  if (oldViewProps.fontSize != newViewProps.fontSize) {
 //    _label.font = [UIFont systemFontOfSize:newViewProps.fontSize];
 //  }
+  
+  if (needsUpdateState && _state != nullptr) {
+    auto size = _label.intrinsicContentSize;
+    _state->updateState(SimpleTextState(size.width, size.height));
+  }
 
   [super updateProps:props oldProps:oldProps];
+}
+
+- (void)updateState:(State::Shared const &)state oldState:(State::Shared const &)oldState
+{
+  _state = std::static_pointer_cast<const SimpleTextShadowNode::ConcreteState>(state);
 }
 
 - (void)prepareForRecycle {
   [super prepareForRecycle];
   _label.text = nil;
 }
+
+- (void)willMoveToWindow:(UIWindow *)newWindow
+{
+  if (newWindow != nil) {
+    auto size = _label.intrinsicContentSize;
+    _state->updateState(SimpleTextState(size.width, size.height));
+  }
+}
+
+
 
 + (ComponentDescriptorProvider)componentDescriptorProvider
 {

@@ -5,6 +5,6 @@ export interface NativeProps extends ViewProps {
   text?: string;
 }
 
-export default codegenNativeComponent<NativeProps>(
-  'SimpleText',
-) as HostComponent<NativeProps>;
+export default codegenNativeComponent<NativeProps>('SimpleText', {
+  interfaceOnly: true,
+}) as HostComponent<NativeProps>;
