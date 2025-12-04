@@ -14,11 +14,6 @@
 
 namespace facebook::react {
 
-//using SimpleTextComponentDescriptor = ConcreteComponentDescriptor<SimpleTextShadowNode>;
-//
-//void AppSpec_registerComponentDescriptorsFromCodegen(
-//  std::shared_ptr<const ComponentDescriptorProviderRegistry> registry);
-
 class SimpleTextComponentDescriptor final : public ConcreteComponentDescriptor<SimpleTextShadowNode> {
  public:
   SimpleTextComponentDescriptor(const ComponentDescriptorParameters &parameters) : ConcreteComponentDescriptor(parameters)

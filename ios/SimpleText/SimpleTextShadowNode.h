@@ -31,20 +31,9 @@ class SimpleTextShadowNode final
     return traits;
   }
       
-  //void setLabel(std::shared_ptr<const TextLayoutManager> textLayoutManager);
-
 #pragma mark - LayoutableShadowNode
 
   Size measureContent(const LayoutContext &layoutContext, const LayoutConstraints &layoutConstraints) const override;
 };
-
-///*
-// * `ShadowNode` for <SimpleText> component.
-// */
-//using SimpleTextShadowNode = ConcreteViewShadowNode<
-//    SimpleTextComponentName,
-//    SimpleTextProps,
-//    SimpleTextEventEmitter,
-//    SimpleTextState>;
 
 } // namespace facebook::react

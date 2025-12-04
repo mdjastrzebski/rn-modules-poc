@@ -33,28 +33,6 @@ using namespace facebook::react;
   return self;
 }
 
-//- (CGSize)intrinsicContentSize
-//{
-//  return _label.intrinsicContentSize;
-//}
-//
-- (CGSize)sizeThatFits:(CGSize)size
-{
-  return [_label sizeThatFits:size];
-}
-//
-
-//- (void)updateLayoutMetrics:(const LayoutMetrics &)layoutMetrics
-//           oldLayoutMetrics:(const LayoutMetrics &)oldLayoutMetrics
-//{
-//  // Using stored `_layoutMetrics` as `oldLayoutMetrics` here to avoid
-//  // re-applying individual sub-values which weren't changed.
-//  [super updateLayoutMetrics:layoutMetrics oldLayoutMetrics:_layoutMetrics];
-//  //_label.layoutMetrics = _layoutMetrics;
-//  [_label setNeedsDisplay];
-//  [self setNeedsLayout];
-//}
-
 -(void)layoutSubviews
 {
   [super layoutSubviews];
@@ -90,11 +68,6 @@ using namespace facebook::react;
   _state = std::static_pointer_cast<const SimpleTextShadowNode::ConcreteState>(state);
 }
 
-- (void)prepareForRecycle {
-  [super prepareForRecycle];
-  _label.text = nil;
-}
-
 - (void)willMoveToWindow:(UIWindow *)newWindow
 {
   if (newWindow != nil) {
@@ -103,7 +76,10 @@ using namespace facebook::react;
   }
 }
 
-
+- (void)prepareForRecycle {
+  [super prepareForRecycle];
+  _label.text = nil;
+}
 
 + (ComponentDescriptorProvider)componentDescriptorProvider
 {
