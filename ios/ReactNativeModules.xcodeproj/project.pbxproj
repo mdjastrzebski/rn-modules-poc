@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-ReactNativeModules.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-ReactNativeModules.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		4828F4FC2EE2334D0052A562 /* SimpleTextShadowNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4828F4FB2EE233480052A562 /* SimpleTextShadowNode.mm */; };
+		4828F4FF2EE23D2C0052A562 /* SimpleTextState.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4828F4FE2EE235220052A562 /* SimpleTextState.mm */; };
+		48620DE62EDD040F00D92032 /* RCTSimpleText.mm in Sources */ = {isa = PBXBuildFile; fileRef = 48620DE52EDD040F00D92032 /* RCTSimpleText.mm */; };
 		4885580B2ED65E7B00DE5CE5 /* RCTExampleTurboModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4885580A2ED65E7B00DE5CE5 /* RCTExampleTurboModule.mm */; };
 		68C8F262B5E168C568085D96 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
@@ -21,6 +24,13 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReactNativeModules/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = ReactNativeModules/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-ReactNativeModules.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeModules.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeModules/Pods-ReactNativeModules.debug.xcconfig"; sourceTree = "<group>"; };
+		4828F4F92EE232E90052A562 /* SimpleTextComponentDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTextComponentDescriptor.h; sourceTree = "<group>"; };
+		4828F4FA2EE233160052A562 /* SimpleTextShadowNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTextShadowNode.h; sourceTree = "<group>"; };
+		4828F4FB2EE233480052A562 /* SimpleTextShadowNode.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleTextShadowNode.mm; sourceTree = "<group>"; };
+		4828F4FD2EE234E10052A562 /* SimpleTextState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTextState.h; sourceTree = "<group>"; };
+		4828F4FE2EE235220052A562 /* SimpleTextState.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleTextState.mm; sourceTree = "<group>"; };
+		48620DE42EDD040F00D92032 /* RCTSimpleText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTSimpleText.h; sourceTree = "<group>"; };
+		48620DE52EDD040F00D92032 /* RCTSimpleText.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RCTSimpleText.mm; sourceTree = "<group>"; };
 		488558082ED65E7900DE5CE5 /* ReactNativeModules-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeModules-Bridging-Header.h"; sourceTree = "<group>"; };
 		488558092ED65E7B00DE5CE5 /* RCTExampleTurboModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTExampleTurboModule.h; sourceTree = "<group>"; };
 		4885580A2ED65E7B00DE5CE5 /* RCTExampleTurboModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RCTExampleTurboModule.mm; sourceTree = "<group>"; };
@@ -64,6 +74,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		48620DE32EDD03D200D92032 /* SimpleText */ = {
+			isa = PBXGroup;
+			children = (
+				4828F4FE2EE235220052A562 /* SimpleTextState.mm */,
+				4828F4FD2EE234E10052A562 /* SimpleTextState.h */,
+				4828F4FB2EE233480052A562 /* SimpleTextShadowNode.mm */,
+				4828F4FA2EE233160052A562 /* SimpleTextShadowNode.h */,
+				4828F4F92EE232E90052A562 /* SimpleTextComponentDescriptor.h */,
+				48620DE42EDD040F00D92032 /* RCTSimpleText.h */,
+				48620DE52EDD040F00D92032 /* RCTSimpleText.mm */,
+			);
+			path = SimpleText;
+			sourceTree = "<group>";
+		};
 		488558072ED65E2C00DE5CE5 /* ExampleTurboModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +108,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				48620DE32EDD03D200D92032 /* SimpleText */,
 				488558072ED65E2C00DE5CE5 /* ExampleTurboModule */,
 				13B07FAE1A68108700A75B9A /* ReactNativeModules */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -262,7 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
+				4828F4FF2EE23D2C0052A562 /* SimpleTextState.mm in Sources */,
 				4885580B2ED65E7B00DE5CE5 /* RCTExampleTurboModule.mm in Sources */,
+				4828F4FC2EE2334D0052A562 /* SimpleTextShadowNode.mm in Sources */,
+				48620DE62EDD040F00D92032 /* RCTSimpleText.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
