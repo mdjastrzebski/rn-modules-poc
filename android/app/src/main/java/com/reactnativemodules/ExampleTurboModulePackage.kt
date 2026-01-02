@@ -12,6 +12,7 @@ class ExampleTurboModulePackage: BaseReactPackage() {
     override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
         return listOf(SimpleTextViewManager(reactContext))
     }
+
     override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
         return when (name) {
             ExampleTurboModule.NAME -> ExampleTurboModule(reactContext)

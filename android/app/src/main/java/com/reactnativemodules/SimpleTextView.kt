@@ -2,7 +2,6 @@ package com.reactnativemodules
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatTextView
 
 class SimpleTextView : AppCompatTextView {
@@ -19,6 +18,6 @@ class SimpleTextView : AppCompatTextView {
     }
 
     private fun configureComponent() {
-        this.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+        //this.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
     }
 }
